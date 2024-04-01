@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Icone from './veiga.jpg';
+import Icone from './palmeiras.png';
 import './App.css';
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
       <div className='listaTarefas'>
         <div style={{textAlign: 'center'}}>
           {
-            lista.length < 1 ? <img className='icone-central' src={Icone}/> : lista.map((item, index) => (
+            lista.length < 1 ? <img className='icone-central' src={Icone} width={400}/> : lista.map((item, index) => (
               <div key={index} className={item.isCompleted ? "item completo": "item"}>
                 <span onClick={() => {clicou(index)}}>{item.text}</span>
                 <button onClick={() => {deleta(index)}} className='del'>Deletar</button>
